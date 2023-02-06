@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 0, 128, 0.5);
+}
+.card {
+  width: 300px;
+  height: 400px;
+  transform: perspective(2000px);
+  transition: 1s;
+  position: relative;
+  transform-style: preserve-3d;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.cover p{
+font-family: 'Lobster', cursive;
+font-size: 2em;
+color: rgb(255, 0, 123);
+}
+/* .card span {
+  position: relative;
+  top: 20%;
+  transform: translate(100%, 50%);
+  width: 100px;
+  height: 180px;
+  animation: bits 2s ease-out infinite;
+}
+.card span::before {
+  position: absolute;
+  top: 0px;
+  left: 10;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: red;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  transform: rotate(45deg);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.card span::after {
+  position: absolute;
+  top: 0px;
+  left: -58px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: red;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  transform: rotate(-45deg);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
+  animation: bits duration timing-function delay iteration-count direction
+    fill-mode;
+} */
+/* @keyframes bits {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.6);
+  }
+} */
+img{
+  width: 150px;
+}
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image:linear-gradient(to top, rgba(255, 112, 136, 0.528), rgba(255, 112, 136, 0.395)), url('back.jpg');
+  background-size: cover;
+  background-position:center;
+  backface-visibility: .9;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lobster", cursive;
+}
+h2{
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+h3{
+  text-align: center;
+  margin-top: 10px;
+  font-size: 2em;
+}
+.cover {
+  background: rgb(252, 154, 171);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transition: 1s;
+  transform-origin: left;
+}
+.cover:hover {
+  transform: rotateY(-180deg);
+}
+
+.card:hover {
+  transform: translateX(100px);
+}
+@media screen and (max-width: 500px) {
+  .card {
+    transform: scale(.6);
+  }
+  .card span{
+    transform: scale(.5);
+  }
+}
